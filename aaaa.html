@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <section>
+        <div class="login-box">
+            <div class="column">
+                <form action="" id="registrationForm">
+
+                    <div id="inputFields">
+                        <h2>Registre</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nomInput" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Nom i Cognoms</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nick" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom2">Mal Nom</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput" required title="Correu electrònic - Debe ser una dirección de correo electrónico válida">
+                            <label id="correuu">Correu electrònic</label>
+                            <error class="error" id="errorEmail"></error> <!-- Mensaje de error para el campo Correo Electrónico -->
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="email" id="emailInput2" required title="Comprobacio de correu electronic">
+                            <label class="comprobarEmail">Comprobació Email</label>
+                            <error class="error" id="errorEmail2"></error> <!-- Mensaje de error para el campo Correo Electrónico (comprobación) -->
+                        </div>
+                        <div class="input-box">
+                            <label for="fechaInput" id="dataaa" class="date-label">
+                                Data de naixement
+                            </label>
+                            <input type="text" id="fechaInput" required>
+                            <error class="error" id="errorFecha"></error>
+                        </div>
+                    </div>
+
+                    <label id="sexo">
+                        <div class="radio-container">
+                            <texte class="texte3">* Sexe:</texte>
+                            <div class="radio-buttons">
+                                <label><input type="radio" name="sexo" value="Home"> Home</label>
+                                <label><input type="radio" name="sexo" value="Dona"> Dona</label>
+                                <label><input type="radio" name="sexo" value="Altres"> Altres</label>
+                            </div>
+                        </div>
+                    </label>
+
+                    <br>
+                    <h6 id="camposObligatorios">Tots els camps son obligatoris</h6>
+
+                    <br>
+
+                    <!-- -->
+
+                    <div id="inputFields2">
+
+                        <h2>Domicili</h2>
+
+                        <div class="select-wrapper">
+                            <p id="tipo_via_text">Tri una via</p>
+                            <select id="tipo_via" name="tipo_via">
+                                <option value="carrer">Carrer</option>
+                                <option value="avinguda">Avinguda</option>
+                                <option value="plaça">Plaça</option>
+                                <option value="carretera">Carretera</option>
+                                <option value="ronda">Ronda</option>
+                                <option value="passatge">Passatge</option>
+                                <option value="gran via">Gran Via</option>
+                                <option value="cami">Cami</option>
+                                <option value="passeig">Passeig</option>
+                                <option value="Altre">Altres</option>
+                                <!-- Agregar mes opcions -->
+                            </select>
+                            <div class="select-arrow"></div>
+                        </div>
+
+                        <div class="input-box" id="divnomVia">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="nomVia" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Nom i Cognoms - Debe contener al menos 3 letras y no incluir caracteres especiales ni números">
+                            <label id="nom">Nom de la via</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+
+                        <div class="input-box" id="divcodiPostal">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="codiPostal" required pattern="[0-9]{5}" title="Codi Postal - Debe contener 5 dígitos numéricos">
+                            <label id="nom">Codi Postal</label>
+                            <error class="error" id="errorNom"></error> <!-- Mensaje de error para el campo Nombre -->
+                        </div>
+
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                            <input type="text" id="localitatInput" required pattern="[a-zA-ZÀ-ÿ\s']{3,}" title="Localitat - No puede contener números">
+                            <label>Localitat</label>
+                            <error class="error" id="errorEmail"></error> <!-- Mensaje de error para el campo Correo Electrónico -->
+                        </div>
+
+                        <div class="contenedor-select">
+                            <p id="pais_texto">Selecciona un país</p>
+                            <select id="pais" name="pais">
+                                <option value="">Selecciona un país</option>
+                                <option value="AF">Afganistán</option>
+                                <option value="AL">Albania</option>
+                                <!-- Agrega más opciones según sea necesario -->
+                            </select>
+                            <div class="flecha-select"></div>
+                        </div>
+
+                        <label id="piza">
+                            <div class="radio-container">
+                                <texte class="texte3">* Como te gusta la pizza:</texte>
+                                <div class="radio-buttons">
+                                    <label><input type="radio" name="Piña" value="Piña"> Pi</label>
+                                    <label><input type="radio" name="Piña" value="Dona"> Pn</label>
+                                    <label><input type="radio" name="sin piña" value="sinpiña1"> sin</label>
+                                    <label><input type="radio" name="sin piña" value="sinpiña2"> si?</label>
+                                </div>
+                            </div>
+                        </label>
+
+                    </div>
+
+                    <button type="button" id="submitButton" onclick="segonaPart()">Següent</button>
+                    <button type="button" id="tercera" onclick="terceraPart()">Següentkjk</button>
+
+                    <p id="p">Torna enrere per a <a class="iniciar" href="index.html">Iniciar sesio</a></p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+
+        /*PART 2 REGISTRE ( DOMICILI )*/
+
+        document.getElementById("submitButton").addEventListener("click", segonaPart);
+
+function segonaPart() {
+    let nomValido = validar("nomInput", /^[a-zA-ZÀ-ÿ\s']{3,}$/, "errorNom");
+    let emailValido = validar("emailInput", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail");
+    let email2Valido = validar("emailInput2", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail2");
+    let sexoMarcado = document.querySelector('input[name="sexo"]:checked');
+    let emailInputValue = document.getElementById("emailInput").value;
+    let emailInput2Value = document.getElementById("emailInput2").value;
+    let fechaValida = validarFecha(document.getElementById('fechaInput').value);
+
+    if (nomValido && emailValido && email2Valido && sexoMarcado && emailInputValue === emailInput2Value && fechaValida) {
+        document.getElementById("submitButton").style.display = "none";
+        document.getElementById("inputFields").style.display = "none";
+        document.getElementById("camposObligatorios").style.display = "none";
+        document.getElementById("sexo").style.display = "none";
+        document.getElementById("inputFields2").style.display = "block";
+        document.getElementById("tercera").style.display = "block";
+
+    } else {
+        document.getElementById("submitButton").style.display = "none";
+        document.getElementById("inputFields").style.display = "block";
+        document.getElementById("camposObligatorios").style.display = "block";
+    }
+}
+
+/*PART 3 REGISTRE*/
+
+
+// Continuar con la función terceraPart
+function terceraPart() {
+   
+}
+
+ 
+
+const validarSelect = (selector, errorMessageId) => {
+    let select = document.getElementById(selector);
+    let message = document.getElementById(errorMessageId);
+    let selectedOption = select.options[select.selectedIndex];
+
+    if (selectedOption.value === "") {
+        message.textContent = "Selecciona una opción";
+        return false;
+    } else {
+        message.textContent = "";
+        return true;
+    }
+};
+
+
+
+        const validar = (selector, regular, errorMessageId) => {
+            let element = document.getElementById(selector);
+            let message = document.getElementById(errorMessageId);
+            if (element.value.length === 0) {
+                message.textContent = ""; // Cambiamos el mensaje a vacío
+                message.style.display = "none"; // Ocultamos el mensaje
+                element.style.boxShadow = "none"; // Quitamos la sombra
+                return false;
+            }
+            if (!regular.test(element.value)) {
+                message.textContent = "Valor invàlid";
+                element.style.boxShadow = "0 0 5px red"; // Agregamos sombra roja
+                message.style.display = "block";
+                return false;
+            }
+            message.textContent = "";
+            message.style.display = "none";
+            element.style.boxShadow = "none"; // Quitamos la sombra
+            return true;
+        }
+
+        /* Validación de los campos en tiempo real */
+        const validacionEnTiempoReal = (selector, regular, errorMessageId) => {
+            let inputElement = document.getElementById(selector);
+            inputElement.addEventListener('input', () => {
+                validar(selector, regular, errorMessageId);
+                checkSubmitButton(); // Llamamos a la función para verificar si se debe mostrar el botón de enviar
+            });
+        }
+
+        // Función para validar la fecha
+        const validarFecha = (fecha) => {
+            // Expresión regular para verificar el formato de la fecha (DD/MM/AAAA)
+            const fechaRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+            return fechaRegex.test(fecha);
+        };
+
+        // Evento para validar la fecha al escribir en el campo
+        document.getElementById('fechaInput').addEventListener('input', (event) => {
+            const fecha = event.target.value;
+            const isValid = validarFecha(fecha);
+            const errorFecha = document.getElementById('errorFecha');
+
+            if (!isValid) {
+                errorFecha.textContent = 'Format de data invàlid (DD/MM/AAAA)';
+            } else {
+                errorFecha.textContent = '';
+            }
+
+            checkSubmitButton(); // Llamamos a la función para verificar si se debe mostrar el botón de enviar
+        });
+
+        /* Función para verificar si se debe mostrar el botón de enviar */
+        const checkSubmitButton = () => {
+            let nomValido = validar("nomInput", /^[a-zA-ZÀ-ÿ\s']{3,}$/, "errorNom");
+            let emailValido = validar("emailInput", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail");
+            let email2Valido = validar("emailInput2", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail2");
+            let sexoMarcado = document.querySelector('input[name="sexo"]:checked');
+            let emailInputValue = document.getElementById("emailInput").value;
+            let emailInput2Value = document.getElementById("emailInput2").value;
+            let fechaValida = validarFecha(document.getElementById('fechaInput').value);
+
+            // Mostramos el botón de enviar solo si todos los campos son válidos, los correos electrónicos coinciden y al menos un campo de sexo está marcado
+            if (nomValido && emailValido && email2Valido && sexoMarcado && emailInputValue === emailInput2Value && fechaValida) {
+                document.getElementById("submitButton").style.display = "block"; // Mostramos el botón ir atra
+            }
+        }
+
+        /* Agregar eventos de validación en tiempo real a los campos */
+        validacionEnTiempoReal("nomInput", /^[a-zA-ZÀ-ÿ\s']{3,}$/, "errorNom");
+        validacionEnTiempoReal("emailInput", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail");
+        validacionEnTiempoReal("emailInput2", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "errorEmail2");
+
+        // Agregar evento de cambio a los campos de sexo para verificar el botón de enviar
+        document.querySelectorAll('input[name="sexo"]').forEach(radio => {
+            radio.addEventListener('change', checkSubmitButton);
+        });
+
+
+
+
+        // Obtiene los elementos necesarios
+        const selectWrapper = document.querySelector('.select-wrapper');
+        const select = selectWrapper.querySelector('select');
+        const selectArrow = selectWrapper.querySelector('.select-arrow');
+        const tipoViaText = document.getElementById('tipo_via_text');
+        const optionsList = document.createElement('ul');
+
+        // Crea la lista de opciones
+        Array.from(select.options).forEach(option => {
+            const li = document.createElement('li');
+            li.textContent = option.textContent;
+            li.setAttribute('data-value', option.value);
+            optionsList.appendChild(li);
+        });
+
+        // Agrega la lista de opciones al DOM
+        selectWrapper.appendChild(optionsList);
+
+        // Evento para abrir y cerrar el menú desplegable
+        selectWrapper.addEventListener('click', function(event) {
+            event.stopPropagation(); // Evita que el evento llegue al documento
+            this.classList.toggle('active');
+        });
+
+        // Evento para seleccionar una opción
+        optionsList.addEventListener('click', function(e) {
+            if (e.target.tagName === 'LI') {
+                const value = e.target.getAttribute('data-value');
+                select.value = value;
+                // Actualiza el texto del select personalizado
+                tipoViaText.textContent = value ? ` ${value}` : 'Tri una via';
+                // Oculta el menú desplegable
+            }
+        });
+
+        // Evento para ocultar el menú desplegable al cambiar la selección del select nativo
+        select.addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            tipoViaText.textContent = selectedOption.value ? `Tri una via: ${selectedOption.value}` : 'Tri una via';
+            // Oculta el menú desplegable
+            selectWrapper.classList.remove('active');
+        });
+
+        // Evento para cerrar el menú desplegable al hacer clic fuera de él
+        document.addEventListener('click', function(event) {
+            const isClickInside = selectWrapper.contains(event.target);
+            if (!isClickInside) {
+                selectWrapper.classList.remove('active');
+            }
+        });
+
+        // pais
+
+// Obtiene los elementos necesarios
+const paisSelectWrapper = document.querySelector('.contenedor-select');
+const paisSelect = paisSelectWrapper.querySelector('select');
+const paisArrow = paisSelectWrapper.querySelector('.flecha-select');
+const paisTexto = document.getElementById('pais_texto');
+const paisOptionsList = document.createElement('ul');
+
+// Crea la lista de opciones
+Array.from(paisSelect.options).forEach(option => {
+    const li = document.createElement('li');
+    li.textContent = option.textContent;
+    li.setAttribute('data-value', option.value);
+    paisOptionsList.appendChild(li);
+});
+
+// Agrega la lista de opciones al DOM
+paisSelectWrapper.appendChild(paisOptionsList);
+
+// Evento para abrir y cerrar el menú desplegable
+paisSelectWrapper.addEventListener('click', function(event) {
+    event.stopPropagation(); // Evita que el evento llegue al documento
+    this.classList.toggle('active');
+});
+
+// Evento para seleccionar una opción
+
+
+    paisOptionsList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'LI') {
+        const text = e.target.textContent.trim(); // Obtiene el texto del elemento <li> sin espacios al principio y al final
+        paisSelect.value = text; // Asigna el texto como valor al select
+        paisTexto.textContent = text ? ` ${text}` : 'Selecciona un país'; // Actualiza el texto del select personalizado
+        paisSelectWrapper.classList.remove('active'); // Oculta el menú desplegable
+    }
+
+});
+
+// Evento para ocultar el menú desplegable al cambiar la selección del select nativo
+paisSelect.addEventListener('change', function() {
+    const selectedOption = this.options[this.selectedIndex];
+    paisTexto.textContent = selectedOption.value ? `Selecciona un país: ${selectedOption.value}` : 'Selecciona un país';
+    // Oculta el menú desplegable
+    paisSelectWrapper.classList.remove('active');
+});
+
+// Evento para cerrar el menú desplegable al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    const isClickInside = paisSelectWrapper.contains(event.target);
+    if (!isClickInside) {
+        paisSelectWrapper.classList.remove('active');
+    }
+});
+
+    </script>
+</body>
+
+</html>
